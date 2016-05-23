@@ -1,0 +1,15 @@
+{
+  "ammo_id": "/pa/units/land/bot_ubercannon/bot_ubercannon_ammo.json",
+  "auto_attack": true,
+  "max_range": 100,
+  "pitch_range": 90,
+  "pitch_rate": 360,
+  "rate_of_fire": 1.0,
+  "target_layers": [
+    "WL_LandHorizontal",
+    "WL_WaterSurface"
+  ],
+  "tool_type": "TOOL_Weapon",
+  "yaw_range": 180,
+  "yaw_rate": 360
+}

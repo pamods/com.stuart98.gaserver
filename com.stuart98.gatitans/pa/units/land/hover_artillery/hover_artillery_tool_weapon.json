@@ -1,0 +1,20 @@
+{
+  "ammo_capacity": 16000,
+  "ammo_demand": 3000,
+  "ammo_id": "/pa/units/land/hover_artillery/hover_artillery_ammo.json",
+  "ammo_per_shot": 16000,
+  "ammo_source": "energy",
+  "auto_attack": true,
+  "base_spec": "/pa/tools/base_laser_turret/base_laser_turret.json",
+  "max_range": 240,
+  "pitch_range": 90,
+  "pitch_rate": 40,
+  "rate_of_fire": 0.2,
+  "target_layers": [
+    "WL_Air",
+    "WL_LandHorizontal",
+    "WL_WaterSurface"
+  ],
+  "yaw_range": 180,
+  "yaw_rate": 40
+}

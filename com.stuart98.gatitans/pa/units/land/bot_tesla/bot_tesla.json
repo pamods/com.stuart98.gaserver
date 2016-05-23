@@ -1,0 +1,112 @@
+{
+  "TEMP_texelinfo": 4.07719,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        4
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/spark_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/spark"
+    }
+  },
+  "base_spec": "/pa/units/land/base_bot/base_bot.json",
+  "build_metal_cost": 300,
+  "description": "Riot Bot - Heavy anti-light fire with high aoe. Slow.",
+  "display_name": "Spark",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Bot",
+      "effect_scale": 1.5
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/bot/spark_fire",
+      "effect_spec": "/pa/effects/specs/tesla_muzzle_flash.pfx socket_rightMuzzle /pa/effects/specs/tesla_muzzle_flash.pfx socket_leftMuzzle"
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "max_health": 310,
+  "mesh_bounds": [
+    5,
+    5,
+    4.7
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/bot_tesla/bot_tesla_anim_idle.papa",
+      "walk": "/pa/units/land/bot_tesla/bot_tesla_anim_walk.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/bot_tesla_anim_tree.json",
+    "filename": "/pa/units/land/bot_tesla/bot_tesla.papa",
+    "walk_speed": 8
+  },
+  "navigation": {
+    "acceleration": 140,
+    "brake": -1,
+    "move_speed": 8,
+    "turn_speed": 720,
+    "type": "land-small"
+  },
+  "physics": {
+    "push_class": 2,
+    "radius": 2.0
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 80,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 11.0
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "socket_leftMuzzle",
+        "socket_rightMuzzle"
+      ],
+      "spec_id": "/pa/units/land/bot_tesla/bot_tesla_tool_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Heavy",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_CannonBuildable"
+  ]
+}

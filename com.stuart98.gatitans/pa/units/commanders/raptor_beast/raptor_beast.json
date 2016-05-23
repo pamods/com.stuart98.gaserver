@@ -1,0 +1,89 @@
+{
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        -0.2,
+        12.8
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "base_spec": "/pa/units/commanders/raptor_base_uber/raptor_base.json",
+  "catalog_object_name": "RaptorBeast",
+  "client": {
+    "ui": {
+      "image": "/ui/main/shared/img/commanders/img_raptor_beast.png",
+      "profile_image": "/ui/main/shared/img/commanders/profiles/profile_raptor_beast.png",
+      "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_raptor_beast_thumb.png"
+    }
+  },
+  "description": "Raptor Beast Commander.",
+  "display_name": "Beast Commander",
+  "headlights": [
+    {
+      "bone": "bone_spine",
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "far_distance": 30.0,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 6.0,
+      "near_distance": 3.0,
+      "near_height": 5.0,
+      "near_width": 5.0,
+      "offset": [
+        0,
+        -3.652,
+        0.366
+      ],
+      "orientation": [
+        0.0,
+        45.0,
+        0.0
+      ],
+      "shadow_resolution": 128
+    }
+  ],
+  "lamps": [
+    {
+      "bone": "bone_spine",
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intensity": 5.0,
+      "offset": [
+        0,
+        -3.652,
+        0.366
+      ],
+      "radius": 2.0
+    },
+    {
+      "bone": "bone_leftShoulder",
+      "color": [
+        0.4,
+        1.0,
+        0.01
+      ],
+      "intensity": 2.0,
+      "offset": [
+        0.4,
+        3.46,
+        -1.1
+      ],
+      "radius": 4.0
+    }
+  ],
+  "model": {
+    "filename": "/pa/units/commanders/raptor_beast/raptor_beast.papa"
+  }
+}

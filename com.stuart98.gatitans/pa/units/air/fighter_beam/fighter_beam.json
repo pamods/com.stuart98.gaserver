@@ -1,0 +1,105 @@
+{
+  "TEMP_texelinfo": 6.1803,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/air/air_fighter_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving_laterally",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/air/fighter"
+    }
+  },
+  "base_spec": "/pa/units/air/base_flyer/base_flyer.json",
+  "build_metal_cost": 320,
+  "description": "Air Superiority Fighter: Armed with long-ranged forward-firing light anti-air railguns.",
+  "display_name": "Eagle",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/air"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Air",
+      "effect_scale": 0.85,
+      "effect_spec": "/pa/units/air/base_flyer/base_flyer_death.pfx"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire"
+    }
+  },
+  "fx_offsets": [
+    {
+      "filename": "/pa/units/air/fighter/fighter_jets.pfx",
+      "offset": [
+        0,
+        2.9,
+        0.836
+      ],
+      "type": "moving_forward"
+    }
+  ],
+  "guard_layer": "WL_Air",
+  "guard_radius": 80,
+  "max_health": 420,
+  "mesh_bounds": [
+    9,
+    6.5,
+    3.1
+  ],
+  "model": {
+    "filename": "/pa/units/air/fighter_beam/fighter_beam.papa"
+  },
+  "navigation": {
+    "acceleration": 40,
+    "aggressive_distance": 50.0,
+    "bank_factor": 10,
+    "brake": 35,
+    "hover_time": -1.0,
+    "move_speed": 70,
+    "turn_speed": 140,
+    "type": "air",
+    "vertical_speed": 45
+  },
+  "physics": {
+    "gravity_scalar": 1,
+    "radius": 6
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 140,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 16.0
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": [
+        "muzzle01",
+        "muzzle02"
+      ],
+      "projectiles_per_fire": 2,
+      "spec_id": "/pa/units/air/fighter_beam/fighter_beam_tool_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Fighter",
+    "UNITTYPE_Air",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom4"
+  ]
+}

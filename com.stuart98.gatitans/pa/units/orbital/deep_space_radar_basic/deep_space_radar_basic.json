@@ -1,0 +1,112 @@
+{
+  "TEMP_texelinfo": 46.4947,
+  "atrophy_cool_down": 15.0,
+  "atrophy_rate": 5,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/radar"
+    }
+  },
+  "base_spec": "/pa/units/land/base_structure/base_structure.json",
+  "build_metal_cost": 600,
+  "consumption": {
+    "energy": 600
+  },
+  "description": "Orbital Radar - Orbital radar telemetry.",
+  "display_name": "Orbital Radar",
+  "energy_efficiency_requirement": 0.9,
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/radar"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/radar",
+      "effect_scale": 0.3
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "antenna01",
+      "filename": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_on.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        -90,
+        0,
+        0
+      ],
+      "type": "energy"
+    }
+  ],
+  "max_health": 1000,
+  "mesh_bounds": [
+    12,
+    12,
+    24
+  ],
+  "model": [
+    {
+      "animations": {
+        "end": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_end.papa",
+        "idle": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_closed.papa",
+        "loop": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_loop.papa",
+        "start": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_start.papa"
+      },
+      "animtree": "/pa/units/orbital/deep_space_radar_basic/SoradarA1_at.json",
+      "filename": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_basic_orbital_radar.json"
+    },
+    {
+      "animations": {
+        "end": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_end.papa",
+        "idle": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_closed.papa",
+        "loop": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_loop.papa",
+        "start": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_start.papa"
+      },
+      "animtree": "/pa/units/orbital/deep_space_radar_basic/SoradarA1_at.json",
+      "filename": "/pa/units/orbital/deep_space_radar_basic/orbital_radar_basic_sea.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "physics": {
+    "collision_layers": "WL_AnySurface"
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 120,
+          "shape": "capsule",
+          "uses_energy": false
+        },
+        {
+          "channel": "radar",
+          "layer": "orbital",
+          "radius": 600,
+          "shape": "sphere",
+          "uses_energy": true
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 19.0
+  },
+  "spawn_layers": "WL_AnySurface",
+  "unit_types": [
+    "UNITTYPE_Orbital",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Recon",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_Important"
+  ]
+}

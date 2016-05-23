@@ -1,0 +1,117 @@
+{
+  "TEMP_texelinfo": 4.07719,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3.5
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/aa_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/assault"
+    }
+  },
+  "base_spec": "/pa/units/land/base_bot/base_bot.json",
+  "build_metal_cost": 250,
+  "description": "Heavy AA: Volley fires anti-air missiles..",
+  "display_name": "Stinger",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot",
+      "effect_scale": 1.34
+    },
+    "died": {
+      "audio_cue": "/SE/Death/bot",
+      "effect_scale": 0.8040001
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/structure/air_defense_fire",
+      "effect_scale": 1.34,
+      "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_leftMuzzle /pa/effects/specs/default_muzzle_flash.pfx socket_rightMuzzle"
+    }
+  },
+  "guard_layer": "WL_Air",
+  "max_health": 210,
+  "mesh_bounds": [
+    4,
+    2,
+    4
+  ],
+  "model": {
+    "animations": {
+      "aim_down": "/pa/units/land/bot_aa_adv/bot_aa_adv_anim_aimDownX.papa",
+      "aim_up": "/pa/units/land/bot_aa_adv/bot_aa_adv_anim_aimUpX.papa",
+      "death01": "/pa/units/land/bot_aa_adv/bot_aa_adv_anim_death01X.papa",
+      "idle": "/pa/units/land/bot_aa_adv/bot_aa_adv_anim_idleX.papa",
+      "walk": "/pa/units/land/bot_aa_adv/bot_aa_adv_anim_runX.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/bot_aa_anim_tree.json",
+    "arrows": 5,
+    "filename": "/pa/units/land/bot_aa_adv/bot_aa_advX.papa",
+    "walk_speed": 10
+  },
+  "navigation": {
+    "acceleration": 250,
+    "brake": -1,
+    "move_speed": 10,
+    "turn_speed": 720,
+    "type": "amphibious"
+  },
+  "physics": {
+    "radius": 2.0
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 8.0
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_turret",
+      "muzzle_bone": [
+        "socket_rightMuzzle",
+        "socket_leftMuzzle"
+      ],
+      "spec_id": "/pa/units/land/bot_aa_adv/bot_aa_adv_tool_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom3"
+  ]
+}

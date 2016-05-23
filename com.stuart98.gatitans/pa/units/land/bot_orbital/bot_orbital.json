@@ -1,0 +1,106 @@
+{
+  "TEMP_texelinfo": 8,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        4
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/grenadier_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/grenadier"
+    }
+  },
+  "base_spec": "/pa/units/land/base_bot/base_bot.json",
+  "build_metal_cost": 800,
+  "description": "Anti-Orbital - Light anti-orbital lasers.",
+  "display_name": "Protector",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Bot",
+      "effect_spec": "/pa/effects/specs/default_explosion.pfx"
+    }
+  },
+  "guard_layer": "WL_Orbital",
+  "guard_radius": 80,
+  "max_health": 260,
+  "mesh_bounds": [
+    5,
+    5,
+    10
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/bot_orbital/Bao32_anim_idle.papa",
+      "walk": "/pa/units/land/bot_orbital/Bao32_anim_walk.papa"
+    },
+    "animtree": "/pa/units/land/bot_orbital/Bao32_at.json",
+    "filename": "/pa/units/land/bot_orbital/Bao32.papa",
+    "walk_speed": 3.5
+  },
+  "navigation": {
+    "acceleration": 250,
+    "brake": -1,
+    "move_speed": 9,
+    "turn_speed": 720,
+    "type": "land-small"
+  },
+  "physics": {
+    "push_class": 2,
+    "radius": 2.5
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "Orbital",
+          "radius": 140,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 120,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 10.0
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/bot_orbital/bot_orbital_tool_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_OrbitalDefense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

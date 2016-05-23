@@ -1,0 +1,6 @@
+{
+  "ammo_type": "PBAOE",
+  "planet_impact_spec": {
+    "delay_time": 5
+  }
+}

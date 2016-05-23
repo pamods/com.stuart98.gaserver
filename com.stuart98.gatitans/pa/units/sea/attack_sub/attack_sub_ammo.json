@@ -1,0 +1,22 @@
+{
+  "base_spec": "/pa/ammo/torpedo/torpedo.json",
+  "cruise_height": 2,
+  "damage": 120,
+  "events": {
+    "died": {
+      "effect_scale": 0.3,
+      "effect_spec": "/pa/effects/specs/default_explosion.pfx"
+    }
+  },
+  "full_damage_splash_radius": 1,
+  "initial_velocity": 10.0,
+  "lifetime": 6.0,
+  "max_velocity": 80.0,
+  "model": {
+    "filename": "/pa/units/sea/torpedo_small/torpedo_small.papa"
+  },
+  "splash_damage": 80,
+  "splash_damages_allies": true,
+  "splash_radius": 4,
+  "turn_rate": 360
+}

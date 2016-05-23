@@ -1,0 +1,140 @@
+{
+  "TEMP_texelinfo": 5.84968,
+  "armor_type": "AT_Hover",
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        2.7
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/veh/tank_hover_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/veh/tank_hover"
+    }
+  },
+  "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+  "build_metal_cost": 275,
+  "description": "Hover Anti-Air. Good speed; long range low damage light anti-air railgun.",
+  "display_name": "Thunderbolt",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/veh"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Veh"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "hover",
+      "filename": "/pa/effects/specs/hover.pfx",
+      "offset": [
+        0,
+        -2,
+        0
+      ],
+      "type": "idle"
+    },
+    {
+      "bone": "hover",
+      "filename": "/pa/effects/specs/hover.pfx",
+      "offset": [
+        1.6,
+        2,
+        0
+      ],
+      "type": "idle"
+    },
+    {
+      "bone": "hover",
+      "filename": "/pa/effects/specs/hover.pfx",
+      "offset": [
+        -1.6,
+        2,
+        0
+      ],
+      "type": "idle"
+    }
+  ],
+  "guard_layer": "WL_Air",
+  "max_health": 325,
+  "mesh_bounds": [
+    4,
+    5.6,
+    3.8
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/hover_aa/Vaa22_anim_idle.papa"
+    },
+    "animtree": "/pa/anim/one_turret_idle.json",
+    "filename": "/pa/units/land/hover_aa/Vaa22.papa"
+  },
+  "navigation": {
+    "acceleration": 35,
+    "brake": 35,
+    "move_speed": 16,
+    "turn_in_place": false,
+    "turn_speed": 45,
+    "type": "hover"
+  },
+  "physics": {
+    "air_friction": 0.5,
+    "radius": 3
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 120,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 13.0
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "muzzle_bone": "muzzle00",
+      "spec_id": "/pa/units/land/hover_aa/hover_aa_tool_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Naval",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Hover",
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

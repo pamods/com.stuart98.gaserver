@@ -1,0 +1,22 @@
+{
+  "author": "Stuart98",
+  "build": "89755",
+  "category": [
+    "Units",
+    "Balance"
+  ],
+  "context": "server",
+  "companions": [
+    "com.pa.stuart98.gat.client"
+  ],
+  "date": "2016/05/23",
+  "description": "A complete rework of PA with a focus on strategy and unit composition, with new units, new balance, and a new experience.",
+  "display_name": "Galactic Annihilation Titans Server v2.26",
+  "enabled": true,
+  "forum": "https://forums.uberent.com/threads/soon.70525/",
+  "icon": "http://i.imgur.com/g8m0AAg.png?1",
+  "identifier": "com.stuart98.gatitans",
+  "priority": 90,
+  "signature": "(not yet implemented)",
+  "version": "2.26"
+}

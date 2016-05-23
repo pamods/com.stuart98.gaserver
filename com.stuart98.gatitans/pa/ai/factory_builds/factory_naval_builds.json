@@ -1,0 +1,635 @@
+{
+  "build_list": [
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "BaseThreatened"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Naval & Fabber & Basic",
+            "value0": 2
+          },
+          {
+            "string0": "BasicNavalFabber",
+            "test_type": "CanAffordPotentialDrain"
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 10,
+      "name": "Basic Naval Fabber",
+      "priority": 100,
+      "to_build": "BasicNavalFabber"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": false,
+            "test_type": "BaseThreatened"
+          },
+          {
+            "boolean": false,
+            "test_type": "HaveFullPlanetIntel"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountPerPlanetRadius",
+            "unit_type_string0": "Air & Scout",
+            "value0": 250
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountPerPlanetRadius",
+            "unit_type_string0": "Naval & Scout",
+            "value0": 250
+          }
+        ],
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": false,
+            "test_type": "BaseThreatened"
+          },
+          {
+            "boolean": false,
+            "test_type": "HaveFullPlanetIntel"
+          },
+          {
+            "boolean": false,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Naval & Scout",
+            "value0": 1
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 10,
+      "name": "SeaScout",
+      "priority": 98,
+      "to_build": "SeaScout"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 10,
+      "name": "SeaScout",
+      "priority": 98,
+      "to_build": "SeaScout - AA"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Destroyer",
+      "priority": 97,
+      "to_build": "Destroyer"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<=",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Naval & Basic & Custom4",
+            "unit_type_string1": "Tank & Basic & Offense - Custom4 | Construction | Sub | Scout) | Tank & Basic & Offense & Custom4",
+            "value0": 0.75
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Torp Boat",
+      "priority": 98,
+      "to_build": "SeaTorpedos"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": ">",
+            "string0": "Naval",
+            "test_type": "PlanetThreat",
+            "value0": 0
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Mobile & Naval & Sub",
+            "unit_type_string1": "Mobile & Naval - Fabber",
+            "value0": 0.25
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Attack Sub",
+      "priority": 97,
+      "to_build": "Sub"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Sea Light Raider Tank",
+      "priority": 97,
+      "to_build": "LightRaiderTank"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": ">",
+            "string0": "Air",
+            "test_type": "PlanetThreat",
+            "value0": 0
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "(Tank | Bot | Naval) & AirDefense",
+            "unit_type_string1": "(Tank | Bot | Naval) - Fabber",
+            "value0": 0.1
+          }
+        ],
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": ">",
+            "string0": "Air",
+            "string1": "AntiAir",
+            "test_type": "PlanetHighestEnemyArmyThreatRatio",
+            "value0": 1.0
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "(Tank | Bot | Naval) & AirDefense",
+            "unit_type_string1": "(Tank | Bot | Naval) - Fabber",
+            "value0": 0.25
+          }
+        ],
+        [
+          {
+            "compare0": ">",
+            "string0": "Air",
+            "string1": "AntiAir",
+            "test_type": "BaseThreatRatio",
+            "value0": 1.0
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": 1,
+      "name": "Sea AA Hovertank",
+      "priority": 97,
+      "to_build": "AAHover"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "boolean": true,
+            "test_type": "HaveSeenEnemyUnits",
+            "unit_type_string0": "Offense | Economy | FactoryBuild | CmdBuild"
+          },
+          {
+            "boolean": false,
+            "test_type": "HaveSeenEnemyUnits",
+            "unit_type_string0": "Recon & Naval"
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Attack Sub - No Sonar",
+      "priority": 300,
+      "to_build": "Sub"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Sea Hover Tank",
+      "priority": 97,
+      "to_build": "HoverTank"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "BaseThreatened"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Naval & Fabber & Advanced",
+            "value0": 2
+          },
+          {
+            "string0": "AdvancedNavalFabber",
+            "test_type": "CanAffordPotentialDrain"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 15,
+      "name": "Advanced Naval Fabber",
+      "priority": 200,
+      "to_build": "AdvancedNavalFabber"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "Sea Railgun Hovertank",
+      "priority": 199,
+      "to_build": "SniperHover"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "Battleship",
+      "priority": 199,
+      "to_build": "Battleship"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "MissleShip",
+      "priority": 199,
+      "to_build": "MissleShip"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": ">",
+            "string0": "Naval",
+            "test_type": "PlanetThreat",
+            "value0": 0
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Mobile & Naval & Sub",
+            "unit_type_string1": "Mobile & Naval - Fabber",
+            "value0": 0.25
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "Missile Sub",
+      "priority": 199,
+      "to_build": "MissileSub"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "string0": "Tutorial",
+            "test_type": "HasPersonalityTag"
+          },
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "(Tank | Bot | Naval) & Deconstruction",
+            "unit_type_string1": "(Tank | Bot | Naval) - Fabber",
+            "value0": 0.1
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Sea Nano Swarm",
+      "priority": 199,
+      "to_build": "NanoSwarm"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": ">",
+            "string0": "Air",
+            "test_type": "PlanetThreat",
+            "value0": 0
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Naval & AirDefense & Advanced",
+            "unit_type_string1": "Naval & Advanced - Fabber",
+            "value0": 0.1
+          }
+        ],
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": ">",
+            "string0": "Air",
+            "string1": "AntiAir",
+            "test_type": "PlanetHighestEnemyArmyThreatRatio",
+            "value0": 1
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployLandFromBase"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Naval & AirDefense & Advanced",
+            "unit_type_string1": "Naval & Advanced - Fabber",
+            "value0": 0.25
+          }
+        ],
+        [
+          {
+            "compare0": ">",
+            "string0": "Air",
+            "string1": "AntiAir",
+            "test_type": "BaseThreatRatio",
+            "value0": 1
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": 1,
+      "name": "Frigate",
+      "priority": 300,
+      "to_build": "Frigate"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "ammo_capacity": 10,
+  "ammo_demand": 0,
+  "ammo_id": "/pa/units/land/bot_raider/bot_raider_ammo.json",
+  "ammo_per_shot": 0.4,
+  "ammo_source": "time",
+  "auto_attack": true,
+  "base_spec": "/pa/tools/base_bot_weapon/base_bot_weapon.json",
+  "carpet_fire": true,
+  "carpet_wait_for_full_ammo": true,
+  "idle_aim_delay": 1.0,
+  "max_range": 75,
+  "pitch_range": 90,
+  "pitch_rate": 10,
+  "rate_of_fire": 10,
+  "target_layers": [
+    "WL_Air",
+    "WL_LandHorizontal",
+    "WL_Seafloor",
+    "WL_WaterSurface"
+  ],
+  "yaw_range": 180,
+  "yaw_rate": 360
+}

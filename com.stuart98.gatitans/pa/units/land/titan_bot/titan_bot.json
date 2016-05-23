@@ -1,0 +1,206 @@
+{
+  "TEMP_texelinfo": 4.07719,
+  "atrophy_cool_down": 15.0,
+  "atrophy_rate": 200.0,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3.5
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "attack_range_frac": 0.3,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/titan/bot"
+    }
+  },
+  "base_spec": "/pa/units/land/base_bot/base_bot.json",
+  "build_metal_cost": 21000,
+  "build_stamp": {
+    "shape": "sphere",
+    "type_data": [
+      {
+        "move_type": "land-small",
+        "stamp_type": "structure"
+      },
+      {
+        "move_type": "amphibious",
+        "stamp_type": "structure"
+      },
+      {
+        "move_type": "amphibious-large",
+        "stamp_type": "structure"
+      },
+      {
+        "move_type": "hover",
+        "stamp_type": "structure"
+      },
+      {
+        "move_type": "hover-large",
+        "stamp_type": "structure"
+      },
+      {
+        "move_type": "deepwater",
+        "stamp_type": "structure"
+      },
+      {
+        "move_type": "underwater",
+        "stamp_type": "structure"
+      }
+    ]
+  },
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist"
+  ],
+  "death": {
+    "decals": [
+      "/pa/effects/specs/scorch_titan_01.json"
+    ]
+  },
+  "death_weapon": {
+    "ground_ammo_spec": "/pa/units/land/titan_bot/titan_bot_ammo_death.json"
+  },
+  "description": "Seismic Titan - Devastating damage to everything nearby. Amphibious. Attacks land, sea, and undersea targets.",
+  "display_name": "Atlas",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/Titan_Complete"
+    },
+    "died": {
+      "audio_cue": "",
+      "effect_scale": 1.0,
+      "effect_spec": ""
+    },
+    "fired": {
+      "audio_cue": "",
+      "effect_spec": ""
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "guard_radius": 100,
+  "has_death_effects": true,
+  "max_health": 40000,
+  "mesh_bounds": [
+    35,
+    35,
+    35
+  ],
+  "model": {
+    "animations": {
+      "attack": "/pa/units/land/titan_bot/titan_bot_anim_attack.papa",
+      "build": "/pa/units/land/titan_bot/titan_bot_anim_build.papa",
+      "dead": "/pa/units/land/titan_bot/titan_bot_anim_dead.papa",
+      "death": "/pa/units/land/titan_bot/titan_bot_anim_death.papa",
+      "deploy": "/pa/units/land/titan_bot/titan_bot_anim_deploy.papa",
+      "idle": "/pa/units/land/titan_bot/titan_bot_anim_idle.papa",
+      "turn_left": "/pa/units/land/titan_bot/titan_bot_anim_left_turn.papa",
+      "turn_right": "/pa/units/land/titan_bot/titan_bot_anim_right_turn.papa",
+      "walk": "/pa/units/land/titan_bot/titan_bot_anim_walk.papa",
+      "walk_stop": "/pa/units/land/titan_bot/titan_bot_anim_walk_stop.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/titan_bot_anim_tree.json",
+    "filename": "/pa/units/land/titan_bot/titan_bot.papa",
+    "walk_speed": 13
+  },
+  "navigation": {
+    "acceleration": 260,
+    "brake": -1.0,
+    "move_speed": 13,
+    "park_stamp": {
+      "cost": 10,
+      "shape": "sphere",
+      "type_data": [
+        {
+          "move_type": "land-small",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "amphibious",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "amphibious-large",
+          "stamp_type": "simple"
+        },
+        {
+          "move_type": "hover",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "hover-large",
+          "stamp_type": "simple"
+        },
+        {
+          "move_type": "deepwater",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "underwater",
+          "stamp_type": "structure"
+        }
+      ]
+    },
+    "turn_accel": 80,
+    "turn_in_place": true,
+    "turn_speed": 60,
+    "type": "amphibious-large"
+  },
+  "physics": {
+    "orient_interp_rate": 60.0,
+    "radius": 15
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 160,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 88.0,
+    "thickness": 2.0
+  },
+  "si_name": "titan",
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": "bone_root",
+      "spec_id": "/pa/units/land/titan_bot/titan_bot_tool_weapon_stomp.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_Titan",
+    "UNITTYPE_Important",
+    "UNITTYPE_FabAdvBuild"
+  ],
+  "wreckage_health_frac": 1.0
+}

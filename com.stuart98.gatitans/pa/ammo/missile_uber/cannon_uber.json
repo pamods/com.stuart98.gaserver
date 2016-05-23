@@ -1,0 +1,40 @@
+{
+  "ammo_type": "Projectile",
+  "audio_loop": "/SE/Weapons/commander/Commander_uber_cannon_fire",
+  "burn_damage": 500,
+  "burn_radius": 15,
+  "damage": 100000,
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/cannon_uber",
+      "effect_spec": "/pa/effects/specs/uber_proj_explosion.pfx"
+    }
+  },
+  "flight_type": "Seeking",
+  "full_damage_splash_radius": 1,
+  "fx_trail": {
+    "filename": "/pa/effects/specs/rocket_uber_proj_trail.pfx",
+    "offset": [
+      0.0,
+      4.6,
+      0.0
+    ]
+  },
+  "initial_velocity": 100.0,
+  "lifetime": 5,
+  "max_velocity": 100.0,
+  "model": {
+    "filename": "/pa/units/air/shell_large/shell_large.papa"
+  },
+  "physics": {
+    "add_to_spatial_db": false,
+    "allow_underground": true,
+    "ignore_gravity": false,
+    "push_class": 1,
+    "radius": 10
+  },
+  "spawn_layers": "WL_Air",
+  "splash_damage": 100000,
+  "splash_radius": 15,
+  "turn_rate": 180
+}

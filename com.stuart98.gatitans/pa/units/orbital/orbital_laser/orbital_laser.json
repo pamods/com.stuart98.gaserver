@@ -1,0 +1,100 @@
+{
+  "TEMP_texelinfo": 31.6199,
+  "attachable": {
+    "offsets": {
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "base_spec": "/pa/units/orbital/base_orbital/base_orbital.json",
+  "build_metal_cost": 600,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack"
+  ],
+  "description": "Orbital Fire Support - Light damage, high rate of fire. Attacks land, sea and air targets.",
+  "display_name": "SXX-1304 Laser Platform",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/orbital"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/orbital",
+      "effect_scale": 1.5,
+      "effect_spec": "/pa/units/air/base_flyer/base_flyer_death_t2.pfx"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/structure/laser_defense_ADV_fire"
+    }
+  },
+  "gravwell_velocity_multiplier": 6.0,
+  "guard_layer": "WL_AnySurface",
+  "max_health": 400,
+  "mesh_bounds": [
+    38,
+    38,
+    40
+  ],
+  "model": {
+    "animations": {
+      "closed": "/pa/units/orbital/orbital_laser/orbital_laser_anim_closed.papa",
+      "deploy": "/pa/units/orbital/orbital_laser/orbital_laser_anim_deploy.papa",
+      "open": "/pa/units/orbital/orbital_laser/orbital_laser_anim_open.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/orbital_laser_anim_tree.json",
+    "filename": "/pa/units/orbital/orbital_laser/orbital_laser.papa"
+  },
+  "navigation": {
+    "acceleration": 40,
+    "brake": 40,
+    "hover_time": -1.0,
+    "move_speed": 40,
+    "turn_speed": 90,
+    "type": "orbital"
+  },
+  "physics": {
+    "gravity_scalar": 0.001,
+    "radius": 10
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 100,
+          "shape": "sphere"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 27.0
+  },
+  "spawn_layers": "WL_Orbital",
+  "tools": [
+    {
+      "aim_bone": "bone_recoil",
+      "muzzle_bone": "socket_muzzle",
+      "spec_id": "/pa/units/orbital/orbital_laser/orbital_laser_tool_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_LaserPlatform",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

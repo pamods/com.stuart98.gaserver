@@ -1,0 +1,106 @@
+{
+  "TEMP_texelinfo": 30.5603,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/sea/T2_missile_ship_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/sea/sea_large"
+    }
+  },
+  "base_spec": "/pa/units/sea/base_ship/base_ship.json",
+  "build_metal_cost": 1500,
+  "description": "Missile Ship - Long-range. High damage tactical missiles. Attacks land, sea, air, and orbital targets.",
+  "display_name": "Stingray",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea",
+      "effect_scale": 1.0,
+      "effect_spec": "/pa/effects/specs/default_explosion_naval_t2.pfx"
+    },
+    "fired0": {
+      "audio_cue": "/SE/Weapons/sea/T2_missile_ship_fire",
+      "effect_spec": ""
+    },
+    "fired1": {
+      "audio_cue": "/SE/Weapons/structure/air_defense_fire",
+      "effect_spec": ""
+    }
+  },
+  "fx_offsets": [
+    {
+      "filename": "/pa/units/sea/missile_ship/missile_ship_wake.pfx",
+      "type": "moving_forward"
+    }
+  ],
+  "guard_layer": "WL_AnySurface",
+  "max_health": 3000,
+  "mesh_bounds": [
+    7,
+    32,
+    7
+  ],
+  "model": {
+    "animations": {
+      "end": "/pa/units/sea/missile_ship/missile_ship_anim_end.papa",
+      "idle": "/pa/units/sea/missile_ship/missile_ship_anim_idle.papa",
+      "start": "/pa/units/sea/missile_ship/missile_ship_anim_start.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/missile_ship_anim_tree.json",
+    "filename": "/pa/units/sea/missile_ship/missile_ship.papa"
+  },
+  "navigation": {
+    "acceleration": 2,
+    "brake": 2,
+    "move_speed": 18,
+    "turn_accel": 15,
+    "turn_speed": 45,
+    "type": "deepwater"
+  },
+  "nearby_target_tick_update_interval": 20,
+  "physics": {
+    "radius": 3,
+    "shape": "sphere"
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 180,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "socket_missile_muzzle01",
+      "fire_event": "fired0",
+      "muzzle_bone": [
+        "socket_missile_muzzle01",
+        "socket_missile_muzzle02"
+      ],
+      "record_index": 0,
+      "spec_id": "/pa/units/sea/missile_ship/missile_ship_tool_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_Tactical",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

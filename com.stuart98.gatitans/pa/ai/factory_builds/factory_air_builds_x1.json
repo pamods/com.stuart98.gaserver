@@ -1,0 +1,68 @@
+{
+  "build_list": [
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ],
+        [
+          {
+            "boolean": true,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountPerPlanetRadius",
+            "unit_type_string0": "Bomber",
+            "value0": 20
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedAirFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 10,
+      "name": "Advanced Air Bomber",
+      "priority": 199,
+      "to_build": "HeavyBomber"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "Air & MissileDefense",
+            "unit_type_string1": "Air & (Bomber | Gunship)",
+            "value0": 0.15
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedAirFactory"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 10,
+      "name": "Support Platform",
+      "priority": 199,
+      "to_build": "SupportPlatform"
+    }
+  ]
+}

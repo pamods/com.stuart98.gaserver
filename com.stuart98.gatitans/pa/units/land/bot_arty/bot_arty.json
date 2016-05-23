@@ -1,0 +1,123 @@
+{
+  "TEMP_texelinfo": 4.07719,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3.5
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/assault_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/assault"
+    }
+  },
+  "base_spec": "/pa/units/land/base_bot/base_bot.json",
+  "build_metal_cost": 200,
+  "description": "Rocket Skirmisher - High damage, low projectile speed. Strong vs defenses and slow units, weak vs raiders.",
+  "display_name": "Stomper",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot",
+      "effect_scale": 1.34
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Bot",
+      "effect_scale": 0.67,
+      "effect_spec": "/pa/effects/specs/default_explosion.pfx"
+    },
+    "fired1": {
+      "audio_cue": "/SE/Weapons/air/fighter_fire",
+      "effect_scale": 2.01,
+      "effect_spec": "/pa/effects/specs/default_small_muzzle_flash.pfx muzzle02"
+    },
+    "fired2": {
+      "audio_cue": "/SE/Weapons/bot/assault_fire",
+      "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_muzzle"
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "max_health": 200,
+  "mesh_bounds": [
+    5.36,
+    4.02,
+    5.36
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/bot_arty/bot_arty_anim_idleX.papa",
+      "walk": "/pa/units/land/bot_arty/bot_arty_anim_walkX.papa"
+    },
+    "animtree": "/pa/units/land/bot_arty/Bassault22_at.json",
+    "filename": "/pa/units/land/bot_arty/bot_artyX.papa",
+    "walk_speed": 5
+  },
+  "navigation": {
+    "acceleration": 250,
+    "brake": -1,
+    "move_speed": 8,
+    "turn_speed": 720,
+    "type": "land-small"
+  },
+  "physics": {
+    "radius": 2.0
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 105,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 8.0
+  },
+  "tools": [
+    {
+      "aim_bone": "turret00",
+      "fire_event": "fired1",
+      "muzzle_bone": "muzzle02",
+      "record_index": 0,
+      "spec_id": "/pa/units/land/bot_arty/bot_arty_tool_weapon.json"
+    },
+    {
+      "aim_bone": "turret00",
+      "fire_event": "fired2",
+      "muzzle_bone": "muzzle01",
+      "record_index": 1,
+      "spec_id": "/pa/units/land/bot_arty/bot_arty_sidearm_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_CannonBuildable"
+  ]
+}

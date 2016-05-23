@@ -1,0 +1,105 @@
+{
+  "TEMP_texelinfo": 1.0,
+  "armor_type": "AT_Structure",
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/structure_small"
+    }
+  },
+  "build_metal_cost": 1,
+  "death": {
+    "decals": [
+      "/pa/effects/specs/scorch_b_01.json"
+    ]
+  },
+  "death_weapon": {
+    "ground_ammo_spec": "/pa/units/land/base_structure/base_structure_death_weapon.json"
+  },
+  "description": "Base Structure Description - If you're seeing this, something is wrong in your structure.",
+  "display_name": "Base Structure",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/factory"
+    },
+    "destroyed": {
+      "audio_cue": "/SE/Impacts/debris_destroyed"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Factory",
+      "effect_spec": "/pa/effects/specs/default_building_explosion.pfx"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/base/base_fire_laser"
+    }
+  },
+  "guard_radius": 50,
+  "max_health": 1,
+  "physics": {
+    "air_friction": 1.0,
+    "allow_pushing": false,
+    "allow_underground": false,
+    "collision_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+    "push_sideways": false,
+    "radius": 1,
+    "shape": "Box",
+    "type": "Structure"
+  },
+  "recon": {
+    "observable": {
+      "layer": "surface_and_air",
+      "show_ghost": true
+    },
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_LandHorizontal",
+  "strategic_icon_priority": 4,
+  "structure": {
+    "cost_stamp": {
+      "shape": "box",
+      "type_data": [
+        {
+          "move_type": "land-small",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "amphibious",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "amphibious-large",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "hover",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "hover-large",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "deepwater",
+          "stamp_type": "structure"
+        },
+        {
+          "move_type": "underwater",
+          "stamp_type": "structure"
+        }
+      ]
+    }
+  },
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_NoBuild"
+  ],
+  "wreckage_health_frac": 1.0
+}

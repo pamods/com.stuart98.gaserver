@@ -1,0 +1,170 @@
+{
+  "TEMP_texelinfo": 4.07719,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        12.2
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/bot/Sub_Commander_move_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/sub_commander"
+    }
+  },
+  "base_spec": "/pa/units/land/base_bot/base_bot.json",
+  "build_metal_cost": 8000,
+  "description": "Uber Cannon Bot - Rapid fires an uber cannon at short range.",
+  "display_name": "Brutalizer",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/bot"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Bot",
+      "effect_scale": 1.7,
+      "effect_spec": "/pa/effects/specs/default_explosion_bot_t2.pfx"
+    },
+    "fired": {
+      "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_rightMuzzle"
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "headlights": [
+    {
+      "bone": "bone_spine",
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "far_distance": 30.0,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 6.0,
+      "near_distance": 3.0,
+      "near_height": 5.0,
+      "near_width": 5.0,
+      "offset": [
+        0.0,
+        -1.7,
+        1.9
+      ],
+      "orientation": [
+        0.0,
+        45.0,
+        0.0
+      ],
+      "shadow_resolution": 128
+    }
+  ],
+  "lamps": [
+    {
+      "bone": "bone_spine",
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intensity": 5.0,
+      "offset": [
+        0.0,
+        -1.7,
+        1.9
+      ],
+      "radius": 2.0
+    },
+    {
+      "bone": "bone_leftElbow",
+      "color": [
+        0.4,
+        1.0,
+        0.01
+      ],
+      "intensity": 2.0,
+      "offset": [
+        0.07,
+        -3.85,
+        0.2
+      ],
+      "radius": 4.0
+    }
+  ],
+  "max_health": 3500,
+  "mesh_bounds": [
+    12.6,
+    7,
+    12.2193
+  ],
+  "model": {
+    "animations": {
+      "aim_down": "/pa/units/commanders/imperial_base/imperial_base_anim_aimDown.papa",
+      "aim_up": "/pa/units/commanders/imperial_base/imperial_base_anim_aimUp.papa",
+      "idle": "/pa/units/commanders/imperial_base/imperial_base_anim_idle.papa",
+      "walk": "/pa/units/commanders/imperial_base/imperial_base_anim_walk.papa",
+      "walk_stop": "/pa/units/commanders/imperial_base/imperial_base_anim_walkStop.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/commander_imperial_anim_tree.json",
+    "filename": "/pa/units/land/bot_ubercannon/bot_ubercannon.papa",
+    "walk_speed": 7.0
+  },
+  "navigation": {
+    "acceleration": 250,
+    "brake": -1,
+    "move_speed": 12,
+    "turn_speed": 720,
+    "type": "amphibious"
+  },
+  "physics": {
+    "radius": 2.0
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 90,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 8.0
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_turret",
+      "muzzle_bone": "socket_rightMuzzle2",
+      "spec_id": "/pa/units/land/bot_ubercannon/bot_ubercannon_tool_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_Custom4",
+    "UNITTYPE_Custom3"
+  ]
+}

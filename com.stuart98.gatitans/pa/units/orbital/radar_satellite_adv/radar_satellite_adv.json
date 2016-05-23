@@ -1,0 +1,112 @@
+{
+  "TEMP_texelinfo": 22.7385,
+  "area_build_separation": 1400,
+  "area_build_type": "Sphere",
+  "attachable": {
+    "offsets": {
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/orbital/radar"
+    }
+  },
+  "base_spec": "/pa/units/orbital/base_orbital_structure/base_orbital_structure.json",
+  "build_metal_cost": 4800,
+  "consumption": {
+    "energy": 9000
+  },
+  "description": "Advanced radar satellite - Detects a vast area for enemy land, sea, and air units.",
+  "display_name": "Advanced Radar Satellite",
+  "energy_efficiency_requirement": 0.9,
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/orbital"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/orbital",
+      "effect_scale": 1.5
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/air/bomber_fire"
+    }
+  },
+  "gravwell_velocity_multiplier": 6.0,
+  "max_health": 6500,
+  "mesh_bounds": [
+    25,
+    15,
+    15
+  ],
+  "model": {
+    "animations": {
+      "closed": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_anim_closed.papa",
+      "deploy": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_anim_deploy.papa",
+      "open": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv_anim_open.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/satellite_launched_anim_tree.json",
+    "filename": "/pa/units/orbital/radar_satellite_adv/radar_satellite_adv.papa"
+  },
+  "physics": {
+    "gravity_scalar": 0.001,
+    "push_class": 15,
+    "radius": 5
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 1500,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 600,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 600,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "radar",
+          "layer": "orbital",
+          "radius": 1200,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "radar",
+          "layer": "celestial",
+          "radius": 1,
+          "shape": "sphere",
+          "uses_energy": true
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 24
+  },
+  "spawn_layers": "WL_Orbital",
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_Recon",
+    "UNITTYPE_FabOrbBuild"
+  ]
+}

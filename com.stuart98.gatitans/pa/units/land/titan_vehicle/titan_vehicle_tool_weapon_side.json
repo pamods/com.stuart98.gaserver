@@ -1,0 +1,19 @@
+{
+  "ammo_id": "/pa/units/land/titan_vehicle/titan_vehicle_ammo_side.json",
+  "auto_attack": true,
+  "base_spec": "/pa/tools/base_shell_turret/base_shell_turret.json",
+  "firing_standard_deviation": 0.25,
+  "idle_aim_delay": 3,
+  "max_range": 220,
+  "pitch_range": 15,
+  "pitch_rate": 90,
+  "rate_of_fire": 0.7,
+  "spread_fire": true,
+  "target_layers": [
+    "WL_LandHorizontal",
+    "WL_Seafloor",
+    "WL_WaterSurface"
+  ],
+  "yaw_range": 80,
+  "yaw_rate": 90
+}

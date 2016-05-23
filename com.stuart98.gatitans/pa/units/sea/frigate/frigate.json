@@ -1,0 +1,112 @@
+{
+  "TEMP_texelinfo": 19.1546,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/sea/frigate_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    }
+  },
+  "base_spec": "/pa/units/sea/base_ship/base_ship.json",
+  "build_metal_cost": 900,
+  "description": "Frigate - Light flak frigate. Heavy anti-air damage, but weak to sea.",
+  "display_name": "Narwhal",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea_large",
+      "effect_scale": 0.7,
+      "effect_spec": "/pa/effects/specs/default_explosion_naval.pfx"
+    },
+    "fired0": {
+      "audio_cue": "/SE/Weapons/sea/frigate_fire_1",
+      "effect_scale": 0.5,
+      "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_muzzle01"
+    },
+    "fired1": {
+      "audio_cue": "/SE/Weapons/structure/air_defense_flak_fire",
+      "effect_scale": 0.5,
+      "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_leftMuzzle02 /pa/effects/specs/default_muzzle_flash.pfx socket_rightMuzzle02"
+    }
+  },
+  "fx_offsets": [
+    {
+      "filename": "/pa/units/sea/frigate/frigate_wake.pfx",
+      "type": "moving_forward"
+    }
+  ],
+  "guard_layer": "WL_AnySurface",
+  "max_health": 1600,
+  "mesh_bounds": [
+    6,
+    15,
+    8
+  ],
+  "model": {
+    "animtree": "/pa/anim/anim_trees/frigate_anim_tree.json",
+    "filename": "/pa/units/sea/frigate/frigate.papa"
+  },
+  "navigation": {
+    "acceleration": 3,
+    "brake": 3,
+    "move_speed": 20,
+    "turn_accel": 10,
+    "turn_speed": 20,
+    "type": "deepwater"
+  },
+  "nearby_target_tick_update_interval": 3,
+  "physics": {
+    "radius": 3,
+    "shape": "sphere"
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 150,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 26.0
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "bone_pitch01",
+      "fire_event": "fired0",
+      "muzzle_bone": [
+        "socket_muzzle01"
+      ],
+      "record_index": 0,
+      "spec_id": "/pa/units/sea/frigate/frigate_tool_weapon_shell.json"
+    },
+    {
+      "aim_bone": "bone_pitch02",
+      "fire_event": "fired1",
+      "muzzle_bone": [
+        "socket_rightMuzzle02",
+        "socket_leftMuzzle02"
+      ],
+      "record_index": 1,
+      "spec_id": "/pa/units/sea/frigate/frigate_tool_weapon_aa.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

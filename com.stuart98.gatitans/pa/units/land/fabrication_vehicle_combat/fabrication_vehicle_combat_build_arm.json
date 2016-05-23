@@ -1,0 +1,28 @@
+{
+  "assist_layers": [
+	""
+  ],
+  "construction_demand": {
+    "energy": 0,
+    "metal": 40
+  },
+  "max_range": 60,
+  "pitch_range": 180,
+  "pitch_rate": 50,
+  "can_only_assist_with_buildable_items": true,
+  "auto_reclaim": true,
+  "reclaim_layers": [
+    "WL_AnyHorizontalGroundOrWaterSurface",
+    "WL_Air",
+    "WL_Underwater",
+    "WL_DeepWater"
+  ],
+  "reclaim_types": [
+    "Unit",
+    "Wreckage",
+    "Feature"
+  ],
+  "tool_type": "TOOL_BuildArm",
+  "yaw_range": 180,
+  "yaw_rate": 50
+}

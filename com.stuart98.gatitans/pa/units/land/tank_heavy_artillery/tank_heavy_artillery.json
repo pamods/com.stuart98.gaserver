@@ -1,0 +1,107 @@
+{
+  "TEMP_texelinfo": 9.31488,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        3.1
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/veh/tank_heavy_mortar_loop_sheller_T2",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    }
+  },
+  "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+  "build_metal_cost": 600,
+  "description": "Light Artillery - Mobile Artillery Artillery Tank. Fires light shells at a low arc. Effective vs armies, ineffective vs structures.",
+  "display_name": "Thumper",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/veh"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Veh",
+      "effect_scale": 1.0,
+      "effect_spec": "/pa/effects/specs/default_explosion_bot_t2.pfx"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/structure/artillery_short_fire"
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "influence_radius": 400,
+  "max_health": 400,
+  "mesh_bounds": [
+    7,
+    7.5,
+    3.8
+  ],
+  "model": {
+    "animtree": "/pa/anim/anim_trees/turret_anim_tree.json",
+    "arrows": 5,
+    "filename": "/pa/units/land/tank_heavy_artillery/tank_heavy_artillery2.papa"
+  },
+  "navigation": {
+    "acceleration": 2,
+    "brake": 2,
+    "group_preference": "back",
+    "move_speed": 12,
+    "turn_speed": 40,
+    "type": "land-small"
+  },
+  "nearby_target_tick_update_interval": 15,
+  "physics": {
+    "radius": 6
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 15.0
+  },
+  "tools": [
+    {
+      "aim_bone": "socket_aim",
+      "muzzle_bone": [
+        "muzzleL",
+        "muzzleR"
+      ],
+      "projectiles_per_fire": 2,
+      "spec_id": "/pa/units/land/tank_heavy_artillery/tank_heavy_artillery_tool_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Artillery",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

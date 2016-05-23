@@ -1,0 +1,59 @@
+{
+  "TEMP_texelinfo": 16.9774,
+  "area_build_separation": 200,
+  "area_build_type": "Sphere",
+  "atrophy_cool_down": 15.0,
+  "atrophy_rate": 80.0,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/radar"
+    }
+  },
+  "base_spec": "/pa/units/land/base_structure/base_structure.json",
+  "build_metal_cost": 1600,
+  "consumption": {
+    "energy": 2000
+  },
+  "description": "Sonar - Detects nearby sea units.",
+  "display_name": "Advanced Sonar",
+  "energy_efficiency_requirement": 0.9,
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea"
+    }
+  },
+  "max_health": 3000,
+  "model": {
+    "animations": {
+      "idle": "/pa/units/sea/sonar_adv/sonar_adv_anim_work.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/constant_idle_anim_tree.json",
+    "filename": "/pa/units/sea/sonar_adv/sonar_adv.papa"
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 350,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 22.0
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_Recon",
+    "UNITTYPE_FabAdvBuild"
+  ]
+}

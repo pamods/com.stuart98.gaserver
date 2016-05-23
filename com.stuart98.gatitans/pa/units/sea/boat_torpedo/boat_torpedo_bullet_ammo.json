@@ -1,0 +1,14 @@
+{
+  "base_spec": "/pa/ammo/base_laser_blast/base_laser_blast.json",
+  "damage": 30,
+  "fx_trail": {
+    "filename": "/pa/effects/specs/laser_blast_light_proj_trail.pfx"
+  },
+  "initial_velocity": 150,
+  "lifetime": 1,
+  "max_velocity": 150,
+  "model": null,
+  "splash_damage": 30,
+  "splash_damages_allies": true,
+  "splash_radius": 1
+}

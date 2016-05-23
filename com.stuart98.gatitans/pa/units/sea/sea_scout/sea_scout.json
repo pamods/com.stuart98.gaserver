@@ -1,0 +1,98 @@
+{
+  "TEMP_texelinfo": 4.24257,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/sea/sea_scout_ship_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    }
+  },
+  "base_spec": "/pa/units/sea/base_ship/base_ship.json",
+  "build_metal_cost": 150,
+  "description": "AA - Anti-naval lasers, anti-anything missiles.",
+  "display_name": "Piranha",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea",
+      "effect_scale": 0.6,
+      "effect_spec": "/pa/effects/specs/default_explosion_naval.pfx"
+    },
+    "fired1": {
+      "audio_cue": "/SE/Weapons/veh/land_scout_fire"
+    },
+    "fired2": {
+      "audio_cue": "/SE/Weapons/air/fighter_fire"
+    }
+  },
+  "fx_offsets": [
+    {
+      "filename": "/pa/units/sea/sea_scout/sea_scout_wake.pfx",
+      "type": "moving_forward"
+    }
+  ],
+  "max_health": 350,
+  "mesh_bounds": [
+    4,
+    11,
+    4
+  ],
+  "model": {
+    "animtree": "/pa/anim/anim_trees/sea_scout_anim_tree.json",
+    "filename": "/pa/units/sea/sea_scout/sea_scout.papa"
+  },
+  "navigation": {
+    "acceleration": 5,
+    "brake": 12,
+    "move_speed": 25,
+    "turn_in_place": false,
+    "turn_speed": 180,
+    "type": "deepwater"
+  },
+  "physics": {
+    "radius": 6
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 180,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 20.0
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "bone_turret",
+      "fire_event": "fired1",
+      "muzzle_bone": "socket_muzzle",
+      "spec_id": "/pa/units/sea/sea_scout/sea_scout_tool_weapon.json"
+    },
+    {
+      "aim_bone": "bone_root",
+      "fire_event": "fired2",
+      "muzzle_bone": "bone_root",
+      "spec_id": "/pa/units/sea/sea_scout/sea_scout_tool_weapon_missile.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Scout",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Basic",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

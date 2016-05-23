@@ -1,0 +1,144 @@
+{
+  "TEMP_texelinfo": 5.84968,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0,
+        2.7
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/veh/tank_light_laser_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    }
+  },
+  "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
+  "build_metal_cost": 500,
+  "description": "Flak Tank - Damage over a very wide area. Only attacks air targets.",
+  "display_name": "Shredder",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/veh"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Veh",
+      "effect_scale": 1.0,
+      "effect_spec": "/pa/effects/specs/default_explosion_bot_t2.pfx"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/structure/air_defense_flak_fire",
+      "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_rightMuzzle01 /pa/effects/specs/default_muzzle_flash.pfx socket_rightMuzzle02 /pa/effects/specs/default_muzzle_flash.pfx socket_leftMuzzle03 /pa/effects/specs/default_muzzle_flash.pfx socket_leftMuzzle01"
+    }
+  },
+  "guard_layer": "WL_AnySurface",
+  "headlights": [
+    {
+      "color": [
+        0.9,
+        0.92,
+        1.0
+      ],
+      "far_distance": 20.0,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 1.4,
+      "near_distance": 1.2,
+      "near_height": 2.0,
+      "near_width": 2.0,
+      "offset": [
+        0.0,
+        -1.0,
+        1.5
+      ],
+      "orientation": [
+        0.0,
+        65.0,
+        0.0
+      ]
+    }
+  ],
+  "max_health": 325,
+  "mesh_bounds": [
+    5.3,
+    9,
+    4.2
+  ],
+  "model": {
+    "animtree": "/pa/anim/anim_trees/tank_flak_anim_tree.json",
+    "arrows": 5,
+    "filename": "/pa/units/land/tank_flak/tank_flaka.papa"
+  },
+  "navigation": {
+    "acceleration": 1,
+    "brake": 1,
+    "group_preference": "back",
+    "move_speed": 13,
+    "turn_speed": 60,
+    "type": "land-small"
+  },
+  "nearby_target_tick_update_interval": 15,
+  "physics": {
+    "push_class": 60,
+    "radius": 6
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 90,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "scrolling_uv": {
+    "scroll_rate": -3.0,
+    "uv_split": 0.899
+  },
+  "selection_icon": {
+    "diameter": 16.0
+  },
+  "tools": [
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "socket_rightMuzzle01",
+        "socket_leftMuzzle02"
+      ],
+      "spec_id": "/pa/units/land/tank_flak/tank_flak_tool_weapon.json"
+    },
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "socket_leftMuzzle01",
+        "socket_rightMuzzle02"
+      ],
+      "spec_id": "/pa/units/land/tank_flak/tank_flak_tool_weapon.json"
+    }
+  ],
+  "transportable": {
+    "size": 1
+  },
+  "unit_types": [
+    "UNITTYPE_Tank",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FactoryBuild"
+  ]
+}

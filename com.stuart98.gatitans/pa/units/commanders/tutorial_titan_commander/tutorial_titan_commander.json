@@ -1,0 +1,34 @@
+{
+  "base_spec": "/pa/units/land/titan_bot/titan_bot.json",
+  "build_metal_cost": 30000,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist"
+  ],
+  "guard_radius": 0,
+  "max_health": 1000000,
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 20000,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "unit_types": [
+    "UNITTYPE_Bot",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Land",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_Titan",
+    "UNITTYPE_Important",
+    "UNITTYPE_Commander"
+  ]
+}

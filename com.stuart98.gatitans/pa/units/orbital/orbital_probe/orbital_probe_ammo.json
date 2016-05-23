@@ -1,0 +1,11 @@
+{
+  "base_spec": "/pa/ammo/base_beam/base_beam.json",
+  "damage": 800,
+  "fx_trail": {
+    "filename": null
+  },
+  "lifetime": 1,
+  "spawn_layers": "Orbital",
+  "splash_damage": 150,
+  "splash_radius": 10
+}

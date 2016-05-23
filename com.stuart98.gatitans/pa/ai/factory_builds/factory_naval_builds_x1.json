@@ -1,0 +1,81 @@
+{
+  "build_list": [
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitRatioOnPlanet",
+            "unit_type_string0": "(Naval & Mobile & Construction) - Fabber",
+            "unit_type_string1": "(Naval & Mobile) - Fabber",
+            "value0": 0.1
+          }
+        ]
+      ],
+      "builders": [
+        "BasicNavalFactory"
+      ],
+      "instance_count": 1,
+      "name": "Fabrication Barge",
+      "priority": 97,
+      "to_build": "SupportBarge"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "Hover Ship",
+      "priority": 199,
+      "to_build": "HoverShip"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": true,
+            "test_type": "CanDeployNavalFromBase"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ],
+      "builders": [
+        "AdvancedNavalFactory"
+      ],
+      "instance_count": -1,
+      "max_num_assisters": 15,
+      "name": "Drone Carrier",
+      "priority": 199,
+      "to_build": "DroneCarrier"
+    }
+  ]
+}

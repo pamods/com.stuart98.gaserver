@@ -1,0 +1,280 @@
+{
+  "build_list": [
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": false,
+            "test_type": "PlanetIsRespawnable"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "string0": "SeismicBot",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "compare0": ">=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "SeismicBot",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "AnyAdvancedFabber",
+        "SupportCommander"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 15,
+      "min_num_assisters": 3,
+      "name": "Seismic Bot",
+      "placement_rules": {
+        "placement_type": "FromMainBaseCenter",
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 0,
+      "shared_instance_count": "Titan",
+      "to_build": "SeismicBot"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": false,
+            "test_type": "PlanetIsRespawnable"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "string0": "FortressVehicle",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "compare0": ">=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "FortressVehicle",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "AnyAdvancedFabber"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 15,
+      "min_num_assisters": 3,
+      "name": "Fortress Vehicle",
+      "placement_rules": {
+        "placement_type": "FromMainBaseCenter",
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 0,
+      "shared_instance_count": "Titan",
+      "to_build": "FortressVehicle"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": false,
+            "test_type": "AloneOnPlanet"
+          },
+          {
+            "boolean": false,
+            "test_type": "PlanetIsRespawnable"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "string0": "TeslaGunship",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "compare0": ">=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "TeslaGunship",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "AnyAdvancedFabber"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 15,
+      "min_num_assisters": 3,
+      "name": "Tesla Gunship",
+      "placement_rules": {
+        "placement_type": "FromMainBaseCenter",
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 480,
+      "shared_instance_count": "Titan",
+      "to_build": "TeslaGunship"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "string0": "MotherShip",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "compare0": ">=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory & Orbital",
+            "value0": 1
+          },
+          {
+            "string0": "MotherShip",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "OrbitalFabber"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 15,
+      "min_num_assisters": 3,
+      "name": "Orbital Mothership",
+      "placement_rules": {
+        "placement_type": "FromMainBaseCenter",
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiOrbital",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 480,
+      "shared_instance_count": "Titan",
+      "to_build": "MotherShip"
+    },
+    {
+      "build_conditions": [
+        [
+          {
+            "boolean": true,
+            "test_type": "EnemyPresenceOnPlanet"
+          },
+          {
+            "compare0": ">",
+            "string0": "Economy",
+            "test_type": "PlanetThreat",
+            "value0": 5000
+          },
+          {
+            "boolean": false,
+            "test_type": "PlanetIsRespawnable"
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          },
+          {
+            "compare0": ">=",
+            "test_type": "PlanetCount",
+            "value0": 2
+          },
+          {
+            "string0": "PlanetSplitter",
+            "test_type": "CanAffordPotentialDrain"
+          },
+          {
+            "boolean": false,
+            "test_type": "PlanetHasUseablePlanetWeapon"
+          },
+          {
+            "boolean": false,
+            "test_type": "PlanetIsMainEcoBase"
+          },
+          {
+            "compare0": ">=",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Factory - Orbital",
+            "value0": 1
+          },
+          {
+            "compare0": "<",
+            "test_type": "UnitCountOnPlanet",
+            "unit_type_string0": "Structure & Advanced & SelfDestruct",
+            "value0": 1
+          },
+          {
+            "boolean": true,
+            "compare0": "<=",
+            "test_type": "AlliedUnitCountOnPlanet",
+            "unit_type_string0": "Structure & Advanced & SelfDestruct",
+            "value0": 0
+          },
+          {
+            "string0": "PlanetSplitter",
+            "test_type": "CanFindPlaceToBuild"
+          }
+        ]
+      ],
+      "builders": [
+        "AnyAdvancedFabber"
+      ],
+      "instance_count": 1,
+      "max_num_assisters": 15,
+      "min_num_assisters": 3,
+      "name": "Planet Splitter",
+      "placement_rules": {
+        "buffer": 5,
+        "placement_type": "FromMainBaseCenter",
+        "threat": {
+          "compare_type": "<",
+          "influence_type": "AntiSurface",
+          "radius": 10,
+          "value": 50
+        }
+      },
+      "priority": 480,
+      "shared_instance_count": "Titan",
+      "to_build": "PlanetSplitter"
+    }
+  ]
+}

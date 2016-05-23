@@ -1,0 +1,113 @@
+{
+  "TEMP_texelinfo": 9.4493,
+  "area_build_separation": 0,
+  "atrophy_cool_down": 15,
+  "atrophy_rate": 10,
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Fab_contruction_beam_loop",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      }
+    }
+  },
+  "base_spec": "/pa/units/land/base_structure/base_structure.json",
+  "build_metal_cost": 325,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Repair",
+    "ORDER_Assist",
+    "ORDER_Reclaim"
+  ],
+  "description": "Engineering Tower - Automatically repairs units, builds at a low price in a high radius.",
+  "display_name": "Architect",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/structure_small",
+      "effect_scale": 1.6
+    },
+    "died": {
+      "audio_cue": "/SE/Death/structure_small",
+      "effect_scale": 0.8
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/structure/air_defense_fire",
+      "effect_scale": 1.6,
+      "effect_spec": "/pa/effects/specs/fab_combat_spray.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "bone_muzzle",
+      "filename": "/pa/effects/specs/fab_combat_spray.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        0,
+        0
+      ],
+      "type": "build"
+    }
+  ],
+  "guard_layer": "WL_LandHorizontal",
+  "max_health": 2000,
+  "mesh_bounds": [
+    8,
+    8,
+    14.400001
+  ],
+  "model": [
+    {
+      "animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
+      "filename": "/pa/units/land/engineering_station/engineering_stationX.papa",
+      "layer": "WL_LandHorizontal",
+      "skirt_decal": "/pa/effects/specs/skirt_engi.json"
+    },
+    {
+      "animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
+      "filename": "/pa/units/land/engineering_station/engineering_stationX.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "nearby_target_tick_update_interval": 2,
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 15.0
+  },
+  "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+  "tools": [
+    {
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": [
+        "bone_muzzle"
+      ],
+      "spec_id": "/pa/units/land/engineering_station/engineering_station_build_arm.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Land",
+    "UNITTYPE_CmdBuild",
+    "UNITTYPE_FabBuild",
+    "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_CombatFabAdvBuild"
+  ]
+}
