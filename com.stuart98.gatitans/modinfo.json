@@ -2,8 +2,9 @@
   "author": "Stuart98",
   "build": "94684",
   "category": [
-    "Units",
-    "Balance"
+    "units",
+    "balance",
+    "titans"
   ],
   "context": "server",
   "companions": [
@@ -21,5 +22,5 @@
   "identifier": "com.stuart98.gatitans",
   "priority": 90,
   "signature": "(not yet implemented)",
-  "version": "2.26"
+  "version": "2.26.fixed"
 }
