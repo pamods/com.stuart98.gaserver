@@ -8,10 +8,10 @@
   ],
   "context": "server",
   "companions": [
-    "com.pa.stuart98.gat.client"
+    "com.stuart98.gat.client"
   ],
   "dependencies": [
-    "com.pa.stuart98.gat.client"
+    "com.stuart98.gat.client"
   ],
   "date": "2016/06/02",
   "description": "A complete rework of PA with a focus on strategy and unit composition, with new units, new balance, and a new experience.",
