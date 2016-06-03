@@ -13,14 +13,14 @@
   "dependencies": [
     "com.pa.stuart98.gat.client"
   ],
-  "date": "2016/05/31",
+  "date": "2016/06/02",
   "description": "A complete rework of PA with a focus on strategy and unit composition, with new units, new balance, and a new experience.",
-  "display_name": "Galactic Annihilation Titans Server v2.26",
+  "display_name": "Galactic Annihilation Titans v2.26",
   "enabled": true,
   "forum": "https://forums.uberent.com/threads/soon.70525/",
   "icon": "http://i.imgur.com/g8m0AAg.png?1",
   "identifier": "com.stuart98.gatitans",
   "priority": 90,
   "signature": "(not yet implemented)",
-  "version": "2.26.fixed"
+  "version": "2.26.extrafixed"
 }
